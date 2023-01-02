@@ -11,14 +11,35 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[900],
+      backgroundColor: const Color(0xFF050019),
       appBar: customAppBar(),
-      body: Column(children: const [Card()],),
+      body: Column(
+        children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.3,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: ((context, index) => Card(
+                    margin: const EdgeInsets.symmetric(horizontal: 10),
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.9,
+                      child: Column(
+                        children: const [
+                           Flexible(
+                            child: Placeholder(),
+                          )
+                        ],
+                      ),
+                    ),
+                  )),
+            ),
+          )
+        ],
+      ),
     );
   }
 
   AppBar customAppBar() {
-
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
@@ -39,6 +60,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+      centerTitle: false,
     );
   }
 }
