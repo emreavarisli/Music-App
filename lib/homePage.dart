@@ -24,9 +24,9 @@ class _HomePageState extends State<HomePage> {
                     child: SizedBox(
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: Column(
-                        children: const [
+                        children: [
                            Flexible(
-                            child: Placeholder(),
+                            child: Placeholder(child: Image.asset('assets/images/madrigal2.jpeg'),),
                           )
                         ],
                       ),
