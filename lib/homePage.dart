@@ -15,26 +15,66 @@ class _HomePageState extends State<HomePage> {
       appBar: customAppBar(),
       body: Column(
         children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.3,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemBuilder: ((context, index) => Card(
-                    margin: const EdgeInsets.symmetric(horizontal: 10),
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.9,
-                      child: Column(
-                        children: [
-                           Flexible(
-                            child: Placeholder(child: Image.asset('assets/images/madrigal2.jpeg'),),
-                          )
-                        ],
-                      ),
-                    ),
-                  )),
-            ),
-          )
+          firstCardDesign(context),
+          Row(
+            children: const [
+              SizedBox(
+                height: 50,
+                child: Text(
+                  'Genres',
+                  style: TextStyle(color: Colors.white, fontSize: 30), 
+                ),
+              ),
+            ],
+          ),
+          secondCardDesign(context),
         ],
+      ),
+    );
+  }
+
+  SizedBox secondCardDesign(BuildContext context) {
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * 0.3,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemBuilder: ((context, index) => Card(
+              margin: const EdgeInsets.symmetric(horizontal: 10),
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.5,
+                child: Column(
+                  children: const [
+                    Flexible(
+                      child: Placeholder(
+                          /*child: Image.asset('assets/images/madrigal2.jpeg')*/),
+                    )
+                  ],
+                ),
+              ),
+            )),
+      ),
+    );
+  }
+
+  SizedBox firstCardDesign(BuildContext context) {
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * 0.3,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemBuilder: ((context, index) => Card(
+              margin: const EdgeInsets.symmetric(horizontal: 10),
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.9,
+                child: Column(
+                  children: const [
+                    Flexible(
+                      child: Placeholder(
+                          /*child: Image.asset('assets/images/madrigal2.jpeg')*/),
+                    )
+                  ],
+                ),
+              ),
+            )),
       ),
     );
   }
@@ -43,24 +83,28 @@ class _HomePageState extends State<HomePage> {
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          const Text(
-            'Mood',
-            style: TextStyle(color: Colors.white, fontSize: 30),
-          ),
-          SizedBox(
-            height: 40,
-            width: 40,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset('assets/images/pp.jpeg'),
-            ),
-          ),
-        ],
-      ),
+      title: moodTitle(),
       centerTitle: false,
+    );
+  }
+
+  Row moodTitle() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        const Text(
+          'Mood',
+          style: TextStyle(color: Colors.white, fontSize: 30),
+        ),
+        SizedBox(
+          height: 40,
+          width: 40,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Image.asset('assets/images/pp.jpeg'),
+          ),
+        ),
+      ],
     );
   }
 }
