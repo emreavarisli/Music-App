@@ -27,20 +27,17 @@ class _HomePageState extends State<HomePage> {
 
   Flexible thirdCardDesign() {
     return Flexible(
-          child: ListView.builder(
-            itemBuilder: (context, index) => Dismissible(
-              key: Key(index.toString()),
-              child: const Card(
-                color: Colors.red,
-                //elevation: 0,
-                margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                child: SizedBox(
-                  height: 75,
-                ),
-              ),
+      child: ListView.builder(
+        itemBuilder: (context, index) => const Card(
+            color: Colors.red,
+            //elevation: 0,
+            margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            child: SizedBox(
+              height: 75,
             ),
           ),
-        );
+      ),
+    );
   }
 
   Row libraryTitle() {
@@ -85,9 +82,14 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: const [
                     Flexible(
+                      flex: 8,
                       child: Placeholder(
                           /*child: Image.asset('assets/images/madrigal2.jpeg')*/),
-                    )
+                    ),
+                    Flexible(
+                      flex: 2,
+                      child: ListTile(title: Text('data'),),
+                    ),
                   ],
                 ),
               ),
