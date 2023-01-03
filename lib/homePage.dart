@@ -16,20 +16,60 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           firstCardDesign(context),
-          Row(
-            children: const [
-              SizedBox(
-                height: 50,
-                child: Text(
-                  'Genres',
-                  style: TextStyle(color: Colors.white, fontSize: 30), 
-                ),
-              ),
-            ],
-          ),
+          genresTitle(),
           secondCardDesign(context),
+          libraryTitle(),
+          thirdCardDesign(),
         ],
       ),
+    );
+  }
+
+  Flexible thirdCardDesign() {
+    return Flexible(
+          child: ListView.builder(
+            itemBuilder: (context, index) => Dismissible(
+              key: Key(index.toString()),
+              child: const Card(
+                color: Colors.red,
+                //elevation: 0,
+                margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                child: SizedBox(
+                  height: 75,
+                ),
+              ),
+            ),
+          ),
+        );
+  }
+
+  Row libraryTitle() {
+    return Row(
+      children: [
+        Container(
+          padding: const EdgeInsets.fromLTRB(15, 10, 0, 10),
+          child: const Text(
+            'Library',
+            style: TextStyle(
+                color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Row genresTitle() {
+    return Row(
+      children: [
+        Container(
+          padding: const EdgeInsets.fromLTRB(15, 10, 0, 10),
+          child: const Text(
+            'Genres',
+            style: TextStyle(
+                color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ],
     );
   }
 
