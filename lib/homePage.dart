@@ -17,10 +17,131 @@ class _HomePageState extends State<HomePage> {
         children: [
           firstHorizontalListViewDesign(),
           genresTitle(),
-          secondCardDesign(context),
+          secondHorizontalListViewDesign(),
           libraryTitle(),
-          thirdCardDesign(),
-          //firstHorizontalListViewDesign(),
+          //thirdCardDesign(),
+          SizedBox(
+            height: 90,
+            child: ListView(
+              scrollDirection: Axis.vertical,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Container(
+                      width: 390,
+                      decoration: const BoxDecoration(
+                        color: Colors.red
+                      ),
+                      child: const Text('data'),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Container(
+                      width: 390,
+                      decoration: const BoxDecoration(
+                        color: Colors.red
+                      ),
+                      child: const Text('data'),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Container(
+                      width: 390,
+                      decoration: const BoxDecoration(
+                        color: Colors.red
+                      ),
+                      child: const Text('data'),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  SizedBox secondHorizontalListViewDesign() {
+    return SizedBox(
+      height: 225,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: InkWell(
+              onTap: () {},
+              child: Container(
+                width: 200,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20), color: Colors.red),
+                child: const Center(
+                    // child: Placeholder(
+                    //   child: Image.asset('assets/images/madrigal.jpg'),
+                    // ),
+                    ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: InkWell(
+              onTap: () {},
+              child: Container(
+                width: 200,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20), color: Colors.red),
+                child: const Center(
+                    // child: Placeholder(
+                    //   child: Image.asset('assets/images/madrigal.jpg'),
+                    // ),
+                    ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: InkWell(
+              onTap: () {},
+              child: Container(
+                width: 200,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20), color: Colors.red),
+                child: const Center(
+                    // child: Placeholder(
+                    //   child: Image.asset('assets/images/madrigal.jpg'),
+                    // ),
+                    ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: InkWell(
+              onTap: () {},
+              child: Container(
+                width: 200,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20), color: Colors.red),
+                child: const Center(
+                    // child: Placeholder(
+                    //   child: Image.asset('assets/images/madrigal.jpg'),
+                    // ),
+                    ),
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -28,7 +149,7 @@ class _HomePageState extends State<HomePage> {
 
   SizedBox firstHorizontalListViewDesign() {
     return SizedBox(
-      height: 250,
+      height: 220,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
@@ -113,36 +234,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ],
-    );
-  }
-
-  SizedBox secondCardDesign(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.3,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemBuilder: ((context, index) => Card(
-              margin: const EdgeInsets.symmetric(horizontal: 10),
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.5,
-                child: Column(
-                  children: const [
-                    Flexible(
-                      flex: 8,
-                      child: Placeholder(
-                          /*child: Image.asset('assets/images/madrigal2.jpeg')*/),
-                    ),
-                    Flexible(
-                      flex: 2,
-                      child: ListTile(
-                        title: Text('data'),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            )),
-      ),
     );
   }
 
