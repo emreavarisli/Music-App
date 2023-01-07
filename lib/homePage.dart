@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
       appBar: customAppBar(),
       body: Column(
         children: [
-          firstCardDesign(context),
+          firstHorizontalListViewDesign(),
           genresTitle(),
           secondCardDesign(context),
           libraryTitle(),
@@ -28,31 +28,47 @@ class _HomePageState extends State<HomePage> {
 
   SizedBox firstHorizontalListViewDesign() {
     return SizedBox(
-          height: 200,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {},
-                  child: Container(
-                    width: 200,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.grey),
-                    child: const Center(
-                      child: Text(
-                        'data',
-                        style: TextStyle(fontSize: 32, color: Colors.white),
-                      ),
-                    ),
+      height: 250,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: InkWell(
+              onTap: () {},
+              child: Container(
+                width: 350,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Center(
+                  child: Placeholder(
+                    child: Image.asset('assets/images/madrigal.jpg'),
                   ),
                 ),
-              )
-            ],
+              ),
+            ),
           ),
-        );
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: InkWell(
+              onTap: () {},
+              child: Container(
+                width: 350,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Center(
+                  child: Placeholder(
+                    child: Image.asset('assets/images/emrefel.jpg'),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   Flexible thirdCardDesign() {
@@ -122,29 +138,6 @@ class _HomePageState extends State<HomePage> {
                         title: Text('data'),
                       ),
                     ),
-                  ],
-                ),
-              ),
-            )),
-      ),
-    );
-  }
-
-  SizedBox firstCardDesign(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.3,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemBuilder: ((context, index) => Card(
-              margin: const EdgeInsets.symmetric(horizontal: 10),
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.9,
-                child: Column(
-                  children: const [
-                    Flexible(
-                      child: Placeholder(
-                          /*child: Image.asset('assets/images/madrigal2.jpeg')*/),
-                    )
                   ],
                 ),
               ),
