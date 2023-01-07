@@ -20,22 +20,52 @@ class _HomePageState extends State<HomePage> {
           secondCardDesign(context),
           libraryTitle(),
           thirdCardDesign(),
+          //firstHorizontalListViewDesign(),
         ],
       ),
     );
+  }
+
+  SizedBox firstHorizontalListViewDesign() {
+    return SizedBox(
+          height: 200,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: InkWell(
+                  onTap: () {},
+                  child: Container(
+                    width: 200,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.grey),
+                    child: const Center(
+                      child: Text(
+                        'data',
+                        style: TextStyle(fontSize: 32, color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
+        );
   }
 
   Flexible thirdCardDesign() {
     return Flexible(
       child: ListView.builder(
         itemBuilder: (context, index) => const Card(
-            color: Colors.red,
-            //elevation: 0,
-            margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-            child: SizedBox(
-              height: 75,
-            ),
+          color: Colors.white,
+          //elevation: 0,
+          margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+          child: SizedBox(
+            height: 75,
           ),
+        ),
       ),
     );
   }
@@ -88,7 +118,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Flexible(
                       flex: 2,
-                      child: ListTile(title: Text('data'),),
+                      child: ListTile(
+                        title: Text('data'),
+                      ),
                     ),
                   ],
                 ),
