@@ -64,9 +64,10 @@ flutter:
     - assets/images/pp.jpeg
     - assets/images/madrigal.jpg
     - assets/images/emrefel.jpg
-    - assets/images/300.jpg
-    - assets/images/500.jpg
-    - assets/images/600.jpg
+    - assets/images/ellerin_uzansa.jpg
+    - assets/images/bana_unutmayi_anlat.jpg
+    - assets/images/bilmeden_guzel.jpg
+    - assets/images/kirlangic.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

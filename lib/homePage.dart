@@ -82,14 +82,12 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.all(10.0),
             child: InkWell(
               onTap: () {},
-              child: Container(
+              child: SizedBox(
                 width: 200,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20), color: Colors.red),
-                child: const Center(
-                    // child: Placeholder(
-                    //   child: Image.asset('assets/images/madrigal.jpg'),
-                    // ),
+                child: Center(
+                    child: Placeholder(
+                      child: Image.asset('assets/images/ellerin_uzansa.jpg'),
+                    ),
                     ),
               ),
             ),
@@ -98,14 +96,12 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.all(10.0),
             child: InkWell(
               onTap: () {},
-              child: Container(
+              child: SizedBox(
                 width: 200,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20), color: Colors.red),
-                child: const Center(
-                    // child: Placeholder(
-                    //   child: Image.asset('assets/images/madrigal.jpg'),
-                    // ),
+                child: Center(
+                    child: Placeholder(
+                      child: Image.asset('assets/images/bilmeden_guzel.jpg'),
+                    ),
                     ),
               ),
             ),
@@ -114,14 +110,12 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.all(10.0),
             child: InkWell(
               onTap: () {},
-              child: Container(
+              child: SizedBox(
                 width: 200,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20), color: Colors.red),
-                child: const Center(
-                    // child: Placeholder(
-                    //   child: Image.asset('assets/images/madrigal.jpg'),
-                    // ),
+                child: Center(
+                    child: Placeholder(
+                      child: Image.asset('assets/images/bana_unutmayi_anlat.jpg'),
+                    ),
                     ),
               ),
             ),
@@ -130,14 +124,12 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.all(10.0),
             child: InkWell(
               onTap: () {},
-              child: Container(
+              child: SizedBox(
                 width: 200,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20), color: Colors.red),
-                child: const Center(
-                    // child: Placeholder(
-                    //   child: Image.asset('assets/images/madrigal.jpg'),
-                    // ),
+                child: Center(
+                    child: Placeholder(
+                      child: Image.asset('assets/images/kirlangic.jpg'),
+                    ),
                     ),
               ),
             ),
