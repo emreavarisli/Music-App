@@ -68,6 +68,9 @@ flutter:
     - assets/images/bana_unutmayi_anlat.jpg
     - assets/images/bilmeden_guzel.jpg
     - assets/images/kirlangic.jpg
+    - assets/images/alabora.jpg
+    - assets/images/sirens.jpg
+    - assets/images/worlds_apart.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

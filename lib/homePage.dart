@@ -19,57 +19,76 @@ class _HomePageState extends State<HomePage> {
           genresTitle(),
           secondHorizontalListViewDesign(),
           libraryTitle(),
-          //thirdCardDesign(),
-          SizedBox(
-            height: 90,
-            child: ListView(
-              scrollDirection: Axis.vertical,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: InkWell(
-                    onTap: () {},
-                    child: Container(
-                      width: 390,
-                      decoration: const BoxDecoration(
-                        color: Colors.red
-                      ),
-                      child: const Text('data'),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: InkWell(
-                    onTap: () {},
-                    child: Container(
-                      width: 390,
-                      decoration: const BoxDecoration(
-                        color: Colors.red
-                      ),
-                      child: const Text('data'),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: InkWell(
-                    onTap: () {},
-                    child: Container(
-                      width: 390,
-                      decoration: const BoxDecoration(
-                        color: Colors.red
-                      ),
-                      child: const Text('data'),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          thirdVerticalListViewDesign(),
         ],
       ),
     );
+  }
+
+  SizedBox thirdVerticalListViewDesign() {
+    return SizedBox(
+          height: 90,
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: InkWell(
+                  onTap: () {},
+                  child: Container(
+                    width: 390,
+                    decoration: const BoxDecoration(color: Colors.red),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          height: 50,
+                          width: 50,
+                          child: ClipRRect(
+                            child: Image.asset('assets/images/alabora.jpg'),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: InkWell(
+                  onTap: () {},
+                  child: Container(
+                    width: 390,
+                    decoration: const BoxDecoration(color: Colors.red),
+                    child: SizedBox(
+                      height: 50,
+                      width: 50,
+                      child: ClipRRect(
+                        child: Image.asset('assets/images/sirens.jpg'),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: InkWell(
+                  onTap: () {},
+                  child: Container(
+                    width: 390,
+                    decoration: const BoxDecoration(color: Colors.red),
+                    child: SizedBox(
+                      height: 50,
+                      width: 50,
+                      child: ClipRRect(
+                        child: Image.asset('assets/images/worlds_apart.jpg'),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
   }
 
   SizedBox secondHorizontalListViewDesign() {
@@ -85,10 +104,10 @@ class _HomePageState extends State<HomePage> {
               child: SizedBox(
                 width: 200,
                 child: Center(
-                    child: Placeholder(
-                      child: Image.asset('assets/images/ellerin_uzansa.jpg'),
-                    ),
-                    ),
+                  child: Placeholder(
+                    child: Image.asset('assets/images/ellerin_uzansa.jpg'),
+                  ),
+                ),
               ),
             ),
           ),
@@ -99,10 +118,10 @@ class _HomePageState extends State<HomePage> {
               child: SizedBox(
                 width: 200,
                 child: Center(
-                    child: Placeholder(
-                      child: Image.asset('assets/images/bilmeden_guzel.jpg'),
-                    ),
-                    ),
+                  child: Placeholder(
+                    child: Image.asset('assets/images/bilmeden_guzel.jpg'),
+                  ),
+                ),
               ),
             ),
           ),
@@ -113,10 +132,10 @@ class _HomePageState extends State<HomePage> {
               child: SizedBox(
                 width: 200,
                 child: Center(
-                    child: Placeholder(
-                      child: Image.asset('assets/images/bana_unutmayi_anlat.jpg'),
-                    ),
-                    ),
+                  child: Placeholder(
+                    child: Image.asset('assets/images/bana_unutmayi_anlat.jpg'),
+                  ),
+                ),
               ),
             ),
           ),
@@ -127,10 +146,10 @@ class _HomePageState extends State<HomePage> {
               child: SizedBox(
                 width: 200,
                 child: Center(
-                    child: Placeholder(
-                      child: Image.asset('assets/images/kirlangic.jpg'),
-                    ),
-                    ),
+                  child: Placeholder(
+                    child: Image.asset('assets/images/kirlangic.jpg'),
+                  ),
+                ),
               ),
             ),
           ),
@@ -180,21 +199,6 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ],
-      ),
-    );
-  }
-
-  Flexible thirdCardDesign() {
-    return Flexible(
-      child: ListView.builder(
-        itemBuilder: (context, index) => const Card(
-          color: Colors.white,
-          //elevation: 0,
-          margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-          child: SizedBox(
-            height: 75,
-          ),
-        ),
       ),
     );
   }
