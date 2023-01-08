@@ -27,68 +27,96 @@ class _HomePageState extends State<HomePage> {
 
   SizedBox thirdVerticalListViewDesign() {
     return SizedBox(
-          height: 90,
-          child: ListView(
-            scrollDirection: Axis.vertical,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: InkWell(
-                  onTap: () {},
-                  child: Container(
-                    width: 390,
-                    decoration: const BoxDecoration(color: Colors.red),
-                    child: Row(
-                      children: [
-                        SizedBox(
-                          height: 50,
-                          width: 50,
-                          child: ClipRRect(
-                            child: Image.asset('assets/images/alabora.jpg'),
-                          ),
-                        ),
-                      ],
+      height: 120,
+      child: ListView(
+        scrollDirection: Axis.vertical,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: InkWell(
+              onTap: () {},
+              child: Container(
+                width: 390,
+                decoration: const BoxDecoration(color: Colors.red),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      height: 50,
+                      width: 50,
+                      child: ClipRRect(
+                        child: Image.asset('assets/images/alabora.jpg'),
+                      ),
                     ),
-                  ),
+                    Container(
+                      child: Row(
+                        children: [
+                          Column(
+                            children: const [
+                              Text(
+                                'Alabora',
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              ),
+                              Text(
+                                'Beyhude',
+                                style: TextStyle(fontSize: 13, color: Colors.grey),
+                              ),
+                            ],
+                          ),
+                          const Text('3.14'),
+                        ],
+                      ),
+                    )
+                  ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: InkWell(
-                  onTap: () {},
-                  child: Container(
-                    width: 390,
-                    decoration: const BoxDecoration(color: Colors.red),
-                    child: SizedBox(
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: InkWell(
+              onTap: () {},
+              child: SizedBox(
+                width: 390,
+                child: Row(
+                  children: [
+                    SizedBox(
                       height: 50,
                       width: 50,
                       child: ClipRRect(
                         child: Image.asset('assets/images/sirens.jpg'),
                       ),
                     ),
-                  ),
+                  ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: InkWell(
-                  onTap: () {},
-                  child: Container(
-                    width: 390,
-                    decoration: const BoxDecoration(color: Colors.red),
-                    child: SizedBox(
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: InkWell(
+              onTap: () {},
+              child: SizedBox(
+                width: 390,
+                child: Row(
+                  children: [
+                    SizedBox(
                       height: 50,
                       width: 50,
                       child: ClipRRect(
                         child: Image.asset('assets/images/worlds_apart.jpg'),
                       ),
                     ),
-                  ),
+                  ],
                 ),
               ),
-            ],
+            ),
           ),
-        );
+        ],
+      ),
+    );
   }
 
   SizedBox secondHorizontalListViewDesign() {
